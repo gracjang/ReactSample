@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -9,10 +10,11 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 62,5%;
-    font-family: "Montserrat", sans-serif;
+    
   }
   body {
-    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
   }
 `;
 
