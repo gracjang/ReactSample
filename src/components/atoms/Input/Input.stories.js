@@ -9,3 +9,7 @@ export default {
 export const Normal = () => {
   return <Input placeholder="login" />;
 };
+
+export const Search = () => {
+  return <Input placeholder="search" search />;
+};

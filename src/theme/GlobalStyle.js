@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 62,5%;
+    font-family: "Montserrat", sans-serif;
   }
   body {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
   }
 `;
