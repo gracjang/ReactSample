@@ -6,6 +6,14 @@ export default {
   component: Card,
 };
 
-export const Normal = () => {
+export const Note = () => {
   return <Card />;
+};
+
+export const Twitter = () => {
+  return <Card cardType="twitter" />;
+};
+
+export const Article = () => {
+  return <Card cardType="article" />;
 };

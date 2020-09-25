@@ -14,7 +14,7 @@ const YellowBackround = styled.div`
   justify-content: center;
   width: 500px;
   height: 500px;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.note};
 `;
 
 export default {
