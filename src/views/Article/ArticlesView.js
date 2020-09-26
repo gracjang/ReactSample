@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArticleView = () => {
+const ArticlesView = () => {
   return (
     <div>
       <h1>ArticleView</h1>
@@ -8,4 +8,4 @@ const ArticleView = () => {
   );
 };
 
-export default ArticleView;
+export default ArticlesView;

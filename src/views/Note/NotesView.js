@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NoteView = () => {
+const NotesView = () => {
   return (
     <div>
       <h1>NoteViews</h1>
@@ -8,4 +8,4 @@ const NoteView = () => {
   );
 };
 
-export default NoteView;
+export default NotesView;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TwitterView = () => {
+const TwittersView = () => {
   return (
     <div>
       <h1>Twitter View</h1>
@@ -8,4 +8,4 @@ const TwitterView = () => {
   );
 };
 
-export default TwitterView;
+export default TwittersView;
