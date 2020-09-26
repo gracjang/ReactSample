@@ -18,7 +18,7 @@ const YellowBackround = styled.div`
 `;
 
 export default {
-  title: './ButtonIcon',
+  title: 'atoms/ButtonIcon',
   component: ButtonIcon,
   decorators: [
     (Story) => (

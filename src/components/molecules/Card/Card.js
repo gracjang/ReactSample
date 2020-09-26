@@ -73,18 +73,15 @@ const Card = ({ cardType }) => {
     <StyledWrapper>
       <InnerWrapper activeColor={cardType}>
         <StyledHeading>Siemandero Gracjan</StyledHeading>
-        <DateInfo>3 days</DateInfo>
+        <DateInfo>Today</DateInfo>
         {cardType === 'twitter' && (
           <StyledAvatar src="https://unavatar.now.sh/twitter/MorawieckiM" />
         )}
         {cardType === 'article' && <StyledLinkButton href="https://twitter.com/MorawieckiM" />}
       </InnerWrapper>
       <InnerWrapper flex>
-        <Paragraph>
-          Sed dolor justo accusam sed sadipscing stet erat aliquyam lorem amet. Rebum justo diam
-          takimata sanctus dolore rebum amet aliquyam.
-        </Paragraph>
-        <Button secondary>REMOVE</Button>
+        <Paragraph>Nie chcesz jakiegoś nowego podatku mordo?</Paragraph>
+        <Button secondary>Podpis Andrzeja</Button>
       </InnerWrapper>
     </StyledWrapper>
   );

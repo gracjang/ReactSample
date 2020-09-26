@@ -1,8 +1,8 @@
 import React from 'react';
-import NotesView from 'views/Note/NotesView';
+import NotesView from 'views/Notes/NotesView';
 import MainTemplate from 'templates/MainTemplate';
-import ArticlesView from 'views/Article/ArticlesView';
-import TwittersView from 'views/Twitter/TwittersView';
+import ArticlesView from 'views/Articles/ArticlesView';
+import TwittersView from 'views/Twitters/TwittersView';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Root = () => {
@@ -12,7 +12,7 @@ const Root = () => {
         <Switch>
           <Route exact path="/" component={NotesView} />
           <Route path="/articles" component={ArticlesView} />
-          <Route exact path="/twitters" component={TwittersView} />
+          <Route path="/twitters" component={TwittersView} />
         </Switch>
       </BrowserRouter>
     </MainTemplate>
