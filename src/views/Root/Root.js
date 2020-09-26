@@ -1,21 +1,21 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import Button from 'components/atoms/Button/Button';
-import GlobalStyle from 'theme/GlobalStyle';
-import { theme } from '../../theme/mainTheme';
+import NoteView from 'views/Note/NoteView';
+import MainTemplate from 'templates/MainTemplate';
+import ArticleView from 'views/Article/ArticleView';
+import TwitterView from 'views/Twitter/TwitterView';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Root = () => {
   return (
-    <div>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <>
-          <h1>Hejka Gracjan</h1>
-          <Button>This is button</Button>
-          <Button secondary>Reset</Button>
-        </>
-      </ThemeProvider>
-    </div>
+    <MainTemplate>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={NoteView} />
+          <Route path="/articles" component={ArticleView} />
+          <Route exact path="/twitters" component={TwitterView} />
+        </Switch>
+      </BrowserRouter>
+    </MainTemplate>
   );
 };
 
