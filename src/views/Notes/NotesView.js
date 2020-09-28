@@ -1,10 +1,11 @@
 import React from 'react';
+import UserPageTemplate from 'templates/UserPageTemplate';
 
 const NotesView = () => {
   return (
-    <div>
+    <UserPageTemplate pageType="note">
       <h1>NoteViews</h1>
-    </div>
+    </UserPageTemplate>
   );
 };
 

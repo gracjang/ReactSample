@@ -1,10 +1,11 @@
 import React from 'react';
+import UserPageTemplate from 'templates/UserPageTemplate';
 
 const TwittersView = () => {
   return (
-    <div>
+    <UserPageTemplate pageType="twitter">
       <h1>Twitter View</h1>
-    </div>
+    </UserPageTemplate>
   );
 };
 
