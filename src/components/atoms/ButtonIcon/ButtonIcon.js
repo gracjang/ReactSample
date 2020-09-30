@@ -12,7 +12,7 @@ const ButtonIcon = styled.button`
   border: none;
 
   &.active {
-    background-color: white;
+    background-color: red;
   }
 `;
 
