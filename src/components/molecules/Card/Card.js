@@ -8,7 +8,7 @@ import LinkIcon from 'assets/link.svg';
 
 const StyledWrapper = styled.div`
   box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
-  width: 35%;
+  width: 85%;
   min-height: 400px;
   border-radius: 10px;
   overflow: hidden;
@@ -36,7 +36,7 @@ const InnerWrapper = styled.div`
 
 const DateInfo = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
-  font-size: ${({ theme }) => theme.fontSize.cs};
+  font-size: ${({ theme }) => theme.fontSize.xxs};
   margin: 0 0 8px;
 `;
 
@@ -68,19 +68,17 @@ const StyledLinkButton = styled.a`
   transform: translateY(-50%);
 `;
 
-const Card = ({ cardType }) => {
+const Card = ({ cardType, title, created, twitterName, articleUrl, content }) => {
   return (
     <StyledWrapper>
       <InnerWrapper activeColor={cardType}>
-        <StyledHeading>Siemandero Gracjan</StyledHeading>
-        <DateInfo>Today</DateInfo>
-        {cardType === 'twitter' && (
-          <StyledAvatar src="https://unavatar.now.sh/twitter/MorawieckiM" />
-        )}
-        {cardType === 'article' && <StyledLinkButton href="https://twitter.com/MorawieckiM" />}
+        <StyledHeading>{title}</StyledHeading>
+        <DateInfo>{created}</DateInfo>
+        {cardType === 'twitter' && <StyledAvatar src={twitterName} />}
+        {cardType === 'article' && <StyledLinkButton href={articleUrl} />}
       </InnerWrapper>
       <InnerWrapper flex>
-        <Paragraph>Nie chcesz jakiegoś nowego podatku mordo?</Paragraph>
+        <Paragraph>{content}</Paragraph>
         <Button secondary>Podpis Andrzeja</Button>
       </InnerWrapper>
     </StyledWrapper>
@@ -89,10 +87,17 @@ const Card = ({ cardType }) => {
 
 Card.propTypes = {
   cardType: PropTypes.oneOf(['note', 'twitter', 'article']),
+  title: PropTypes.string.isRequired,
+  created: PropTypes.string.isRequired,
+  twitterName: PropTypes.string,
+  articleUrl: PropTypes.string,
+  content: PropTypes.string.isRequired,
 };
 
 Card.defaultProps = {
   cardType: 'note',
+  twitterName: null,
+  articleUrl: null,
 };
 
 export default Card;
