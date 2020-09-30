@@ -9,7 +9,7 @@ import LinkIcon from 'assets/link.svg';
 const StyledWrapper = styled.div`
   box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
   width: 85%;
-  min-height: 400px;
+  min-height: 380px;
   border-radius: 10px;
   overflow: hidden;
   display: grid;
@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  padding: 15px 30px 10px;
+  padding: 15px 30px;
   background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : 'white')};
   position: relative;
 
@@ -42,6 +42,7 @@ const DateInfo = styled(Paragraph)`
 
 const StyledHeading = styled(Heading)`
   margin: 5px 0 0;
+  max-width: 300px;
 `;
 
 const StyledAvatar = styled.img`
@@ -51,7 +52,7 @@ const StyledAvatar = styled.img`
   border: 5px solid ${({ theme }) => theme.twitter};
   position: absolute;
   right: 25px;
-  top: 50px;
+  top: 20px;
 `;
 
 const StyledLinkButton = styled.a`
@@ -74,7 +75,9 @@ const Card = ({ cardType, title, created, twitterName, articleUrl, content }) =>
       <InnerWrapper activeColor={cardType}>
         <StyledHeading>{title}</StyledHeading>
         <DateInfo>{created}</DateInfo>
-        {cardType === 'twitter' && <StyledAvatar src={twitterName} />}
+        {cardType === 'twitter' && (
+          <StyledAvatar src={`https://unavatar.now.sh/twitter/${twitterName}`} />
+        )}
         {cardType === 'article' && <StyledLinkButton href={articleUrl} />}
       </InnerWrapper>
       <InnerWrapper flex>
