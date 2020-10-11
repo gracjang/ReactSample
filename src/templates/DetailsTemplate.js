@@ -1,15 +1,12 @@
 import React from 'react';
 import UserPageTemplate from 'templates/UserPageTemplate';
+import { Link } from 'react-router-dom';
 
-const DetailsTemplate = () => {
+const DetailsTemplate = ({ children }) => {
   return (
     <UserPageTemplate>
-      <h1>Notes</h1>
-      <p>
-        I there the this is and lenore some. Is memories still seeming hauntedtell ungainly, spoken
-        be sure heart shrieked quaint, the that there nevernevermore the implore being stood. Before
-        on.
-      </p>
+      {children}
+      <Link to="/">go back</Link>
     </UserPageTemplate>
   );
 };

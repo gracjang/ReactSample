@@ -1,11 +1,12 @@
 import React from 'react';
 import DetailsTemplate from 'templates/DetailsTemplate';
+import { routes } from 'routes/routes';
 
-const DetailsView = () => {
+const DetailsView = ({ match }) => {
   return (
-    <>
-      <DetailsTemplate />
-    </>
+    <DetailsTemplate>
+      <p>{`is twitters: ${match.path === routes.twitter}`}</p>
+    </DetailsTemplate>
   );
 };
 

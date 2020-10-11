@@ -5,14 +5,14 @@ import GridTemplate from '../../templates/GridTemplate';
 
 const NotesView = () => {
   return (
-    <GridTemplate pageType="note">
+    <GridTemplate pageType="notes">
       {NOTES.map((note) => (
         <Card
           key={note.id}
           title={note.title}
           created={note.created}
           content={note.content}
-          cardType="note"
+          cardType="notes"
         />
       ))}
     </GridTemplate>

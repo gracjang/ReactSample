@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
   width: 150px;
   height: 100vh;
   background-color: ${({ theme, activeColorType }) =>
-    activeColorType ? theme[activeColorType] : theme.note};
+    activeColorType ? theme[activeColorType] : theme.notes};
 `;
 
 const StyledLogoButton = styled(NavLink)`
@@ -66,11 +66,11 @@ const Sidebar = ({ pageType }) => {
 };
 
 Sidebar.propTypes = {
-  pageType: PropTypes.oneOf(['note', 'twitter', 'article']),
+  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
 };
 
 Sidebar.defaultProps = {
-  pageType: 'note',
+  pageType: 'notes',
 };
 
 export default Sidebar;

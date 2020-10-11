@@ -5,7 +5,7 @@ import Card from 'components/molecules/Card/Card';
 
 const TwittersView = () => {
   return (
-    <GridTemplate pageType="twitter">
+    <GridTemplate pageType="twitters">
       {TWITTERS.map((twitter) => (
         <Card
           key={twitter.id}
@@ -13,7 +13,7 @@ const TwittersView = () => {
           created={twitter.created}
           content={twitter.content}
           twitterName={twitter.twitterName}
-          cardType="twitter"
+          cardType="twitters"
         />
       ))}
     </GridTemplate>
